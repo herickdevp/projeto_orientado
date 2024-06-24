@@ -1,0 +1,71 @@
+Estrutura BD 
+
+Nome do Banco de Dados: DB_SysAlert
+
+1º Tabela - usuario
+Colunas: 
+1º - id_usuario - int(10) - primary key - NOT NULL
+2º - nome_usuario - char(80) - NOT NULL
+3º - nivel_usuario - int(1) - NOT NULL
+4º - status_usuario - boolean - NOT NULL
+
+2º Tabela - aviso_critico
+Colunas: 
+1º - id_ac - varchar(20) - primary key - NOT NULL
+2º - texto_ac - varchar(255) - NOT NULL
+3º - status_ac - boolean - NOT NULL
+4º - data_inicio_ac- datetime - NOT NULL
+5º - data_fim_ac- datetime
+
+
+3º Tabela - falha_sistemica
+Colunas: 
+1º - id_fs - varchar(20) - primary key - NOT NULL
+2º - sistema_afetado_fs - varchar(50) - NOT NULL
+3º - data_abertura_fs - datetime - NOT NULL
+4º - data_fechamento_fs - datetime
+5º - status_fs - boolean - NOT NULL
+6º - equipe_tratativa_fs - varchar(20) - NOT NULL
+7º - responsavel_fs - char(20) -  NOT NULL
+8º - descricao_fs - varchar(255) - NOT NULL
+
+
+4º Tabela - falha_massiva
+Colunas: 
+1º - id_fm - varchar(20) - primary key - NOT NULL
+2º - os_cor_fm - varchar(20)
+3º - tipo_fm - char(20) - NOT NULL
+4º - aberta_por_fm - char(20) - NOT NULL
+5º - localidade_fm - char(50) - NOT NULL
+6º - regional_fm - char(50)
+7º - qtd_afetado_fm - int(5)
+8ª - qtd_entrante_fm - int(5)
+9º - data_abertura_fm - datetime - NOT NULL
+10º - data_fechamento_fm - datetime
+11º - banner_fm - boolean
+12º - data_inicio_banner_fm - datetime
+13º - data_fim_banner_fm - datetime
+14º - elemento_afetado_1_fm - varchar(50)
+15º - elemento_afetado_2_fm - varchar(50)
+16º - elemento_afetado_3_fm - varchar(50)
+17º - elemento_afetado_4_fm - varchar(50)
+18º - elemento_afetado_5_fm - varchar(50)
+19º - descricao_fm - varchar(255) - NOTNULL
+20º - solucao_fm - varchar(255)
+21º - status_fm - boolean - NOTNULL
+
+
+5º Tabela - Change_rdm
+Colunas: 
+1º - id_rdm - varchar(20) - primary key - NOT NULL
+2º - data_abertura_rdm - datetime - NOT NULL
+3º - data_fechamento_rdm - datetime
+4º - descricao_rdm - varchar(255) - NOT NULL
+5º - tempo_instabilidade_rdm - varchar(20) - NOT NULL
+6º - cliente_afetado_rdn - varchar(255) - NOT NULL
+7º - sistema_afetadi_rdm - varchar(255) - NOT NULL
+8º - localidade_afetada - varchar(255) - NOT NULL 
+9º - status_rdm - boolean - NOTNULL
+
+
+
