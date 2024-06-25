@@ -6,8 +6,10 @@ Nome do Banco de Dados: DB_SysAlert
 Colunas: 
 1º - id_usuario - int(10) - primary key - NOT NULL
 2º - nome_usuario - char(80) - NOT NULL
-3º - nivel_usuario - int(1) - NOT NULL
-4º - status_usuario - boolean - NOT NULL
+3º - email_usuario - varchar(50) NOT NULL
+4º - nivel_usuario - int(1) - NOT NULL
+5º - token usuário - varchar(100) NOTNULL
+5º - status_usuario - boolean - NOT NULL
 
 2º Tabela - aviso_critico
 Colunas: 
@@ -28,6 +30,7 @@ Colunas:
 6º - equipe_tratativa_fs - varchar(20) - NOT NULL
 7º - responsavel_fs - char(20) -  NOT NULL
 8º - descricao_fs - varchar(255) - NOT NULL
+9º - orientacao_fs - varchar(252)
 
 
 4º Tabela - falha_massiva
@@ -53,6 +56,10 @@ Colunas:
 19º - descricao_fm - varchar(255) - NOTNULL
 20º - solucao_fm - varchar(255)
 21º - status_fm - boolean - NOTNULL
+22º - previsao_fm - datetime
+23º - ssp1 - varchar(50)
+24º - ssp2 - varchar(50)
+25º - ssp3 - varchar(50)
 
 
 5º Tabela - Change_rdm

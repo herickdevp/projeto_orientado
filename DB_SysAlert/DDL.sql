@@ -8,7 +8,9 @@ USE DB_SysAlert;
 CREATE TABLE usuario (
     id_usuario INT(10) PRIMARY KEY NOT NULL,
     nome_usuario CHAR(80) NOT NULL,
+    email_usuario VARCHAR(50) NOT NULL,
     nivel_usuario INT(1) NOT NULL,
+    token_usuario VARCHAR(100) NOT NULL,
     status_usuario BOOLEAN NOT NULL
 );
 
@@ -30,7 +32,8 @@ CREATE TABLE falha_sistemica (
     status_fs BOOLEAN NOT NULL,
     equipe_tratativa_fs VARCHAR(20) NOT NULL,
     responsavel_fs CHAR(20) NOT NULL,
-    descricao_fs VARCHAR(255) NOT NULL
+    descricao_fs VARCHAR(255) NOT NULL,
+    orientacao_fs VARCHAR(255)
 );
 
 -- Criação da tabela 'falha_massiva'
@@ -55,7 +58,11 @@ CREATE TABLE falha_massiva (
     elemento_afetado_5_fm VARCHAR(50),
     descricao_fm VARCHAR(255) NOT NULL,
     solucao_fm VARCHAR(255),
-    status_fm BOOLEAN NOT NULL
+    status_fm BOOLEAN NOT NULL,
+    previsao_fm DATETIME,
+    ssp1_fm varchar(50),
+    ssp2_fm varchar(50),
+    ssp3_fm varchar(50)
 );
 
 -- Criação da tabela 'Change_rdm'
