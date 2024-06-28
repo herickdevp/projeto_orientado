@@ -1,0 +1,41 @@
+.header{
+    display: flex;
+    background-color: #239687;
+    justify-content: space-between;
+    padding: 15px 30px 15px 30px;
+
+}
+
+
+.sub-header{
+    margin: 10px 30px 10px 30px;
+}
+.logoTelecom{
+    padding: 30px 15px 30px 15px;
+    background-color: #28BEA5;
+    border-radius: 5px;
+    display: flex;
+    justify-content: end;
+}
+
+
+.menu{
+    margin-top: 15px;
+    display: flex;
+    list-style: none;
+}
+
+.menu a{
+    margin-right: 10px;
+    padding: 7px 50px 7px 50px;
+    background-color: #28BEA5;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.menu a:hover {
+    background-color: #239687;
+    color: #dec129;
+  }
