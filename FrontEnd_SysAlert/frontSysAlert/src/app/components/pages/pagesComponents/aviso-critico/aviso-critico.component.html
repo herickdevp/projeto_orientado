@@ -1,0 +1,21 @@
+<p>aviso-critico</p>
+<div class="aviso-critico">
+    <div class="header-aviso">
+        <img class="btnAdicionar" (click)="openModal()" [src]="iconeAdicionar">
+        <h2 class="tituloAvisos">Avisos Críticos</h2>
+        <p></p>
+    </div>
+    <div class="textoAviso">teste teste</div>
+</div>
+
+
+
+<!-- MODAL ADCIONAR AVISO -->
+
+<div class="modal" *ngIf="isVisible">
+    <div class="modal-content">
+        <span class="close" (click)="closeModal()">&times;</span>
+        <p>MODAL ADIONAR</p>
+
+    </div>
+</div>

@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './footer-component.component.css'
 })
 export class FooterComponentComponent {
+  logoAlgar:string = 'Algar_Telecom_Logo.svg';
 
 }
