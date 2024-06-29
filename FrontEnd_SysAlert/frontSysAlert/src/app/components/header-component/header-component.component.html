@@ -1,6 +1,6 @@
 <div class="header">
-    <img [src]="logo">
-    <img [src]="IconeLogin">
+    <a routerLink="/"><img [src]="logo"></a>
+    <img class="iconeLogin" (click)="openModal()" [src]=" IconeLogin">
 </div>
 
 <div class="sub-header">
@@ -9,13 +9,24 @@
         <img [src]="logoAlgar">
     </div>
 
-    <nav>
-        <ul class="menu">
-            <li><a routerLink="/">Resumo</a></li>
-            <li><a routerLink="/relatorio">Relatório</a></li>
-            <li><a routerLink="/cadastro-usuario">Cadastro Usuário</a></li>
-        </ul>
-    </nav>
-    <p class="att">Atualizado: 10/10/2014 10:50</p>
+    <div class="header-menu">
+        <nav>
+            <ul *ngIf="nivelUsuario === 1 || nivelUsuario === 2" class="menu">
+                <li><a class="btn" routerLink="/">Resumo</a></li>
+                <li><a class="btn" routerLink="/relatorio">Relatório</a></li>
+                <li><a *ngIf="nivelUsuario === 2" class="btn" routerLink="/cadastro-usuario">Cadastro Usuário</a></li>
+            </ul>
+        </nav>
+        <p class="atualizacao">Atualizado: 10/10/2014 10:50</p>
+    </div>
+</div>
 
+<!-- MODAL LOGIN -->
+
+<div class="modal" *ngIf="isVisible">
+    <div class="modal-content">
+        <span class="close" (click)="closeModal()">&times;</span>
+        <img [src]="logoLogin">
+
+    </div>
 </div>
