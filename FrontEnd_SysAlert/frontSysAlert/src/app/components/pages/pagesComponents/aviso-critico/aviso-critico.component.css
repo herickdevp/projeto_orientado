@@ -1,4 +1,6 @@
-.aviso-critico {}
+.aviso-critico {
+    margin-bottom: 30px;
+}
 
 .header-aviso {
     display: flex;

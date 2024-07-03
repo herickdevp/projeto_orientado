@@ -1,1 +1,20 @@
-<p>change-rdm works!</p>
+<div class="change-rdm">
+    <div class="header-change">
+        <img class="btnAdicionar" (click)="openModal()" [src]="iconeAdicionar">
+        <h2 class="tituloChange">Change - RDM</h2>
+        <p></p>
+    </div>
+    <div class="logicaChange">LOGICA DO COMPONENTE</div>
+</div>
+
+
+
+<!-- MODAL ADCIONAR AVISO -->
+
+<div class="modal" *ngIf="isVisible">
+    <div class="modal-content">
+        <span class="close" (click)="closeModal()">&times;</span>
+        <p>MODAL ADIONAR</p>
+
+    </div>
+</div>
