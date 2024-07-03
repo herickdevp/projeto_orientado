@@ -19,7 +19,7 @@ IconeLogin:string = 'IconeLogin.svg';
 logoAlgar:string = 'Algar_Telecom_Logo.svg';
 logoLogin:string = 'logoLogin.svg';
 
-nivelUsuario:number = 2; // VARIVAVEL QUE VAI RECEBER NIVEL DO USUÁRIO DO BANCO DE DADOS
+nivelUsuario:number = 2 // VARIVAVEL QUE VAI RECEBER NIVEL DO USUÁRIO DO BANCO DE DADOS
 
 // MODAL LOGIN - (Necessário importar o Input)
 isVisible = false;

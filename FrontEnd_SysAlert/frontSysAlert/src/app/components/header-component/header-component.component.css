@@ -3,6 +3,8 @@
     background-color: #239687;
     justify-content: space-between;
     padding: 8px 30px 8px 30px;
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.35);
+
 
 }
 
@@ -17,7 +19,7 @@
     display: flex;
     justify-content: end;
     /* offset-x | offset-y | blur-radius | spread-radius | color */
-    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.45);
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.35);
 }
 
 .atualizacao {
@@ -45,7 +47,7 @@
     text-decoration: none;
     transition: 0.4s;
     white-space: nowrap;
-    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.45);
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.35);
 }
 
 .btn:hover {
