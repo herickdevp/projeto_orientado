@@ -16,7 +16,7 @@
     color: #fff;
 }
 
-.logicaChange {
+.tableChange {
     background-color: #E5E5E5;
     border-radius: 0 0 5px 5px;
     /* offset-x | offset-y | blur-radius | spread-radius | color */
@@ -65,4 +65,56 @@
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* LOGICA DO COMPONENTE - TABLE */
+
+/* INCONE CONFIG/EDIT */
+.iconeConfig {
+    position: absolute;
+}
+
+/* Estilo geral da tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1px;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Estilo para as linhas da tabela */
+.tableChanges {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilo para as células da tabela */
+.tableChanges td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0 0 5px 5px;
+}
+
+/* Estilo alternado para as linhas da tabela */
+.tableChanges:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Estilo ao passar o mouse sobre uma linha */
+.tableChanges:hover {
+    background-color: #23968717;
+}
+
+/* Estilo para o cabeçalho da tabela */
+thead tr {
+    background-color: #E5E5E5;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Estilo para as células do cabeçalho */
+thead th,
+thead td {
+    padding: 12px 15px;
 }

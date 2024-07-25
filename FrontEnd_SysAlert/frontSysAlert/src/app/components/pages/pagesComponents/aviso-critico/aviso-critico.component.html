@@ -4,7 +4,22 @@
         <h2 class="tituloAvisos">Avisos Críticos</h2>
         <p></p>
     </div>
-    <div class="textoAviso">LOGICA DO COMPONENTE</div>
+    <div class="tableAviso">
+        <table>
+            <thead>
+                <tr>
+                    <th>Data Inicio</th>
+                    <th>Aviso</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="tableAvisos" *ngFor="let avisoCritico of avisosCriticos" (dblclick)="openConfig()">
+                    <td>{{avisoCritico.id_ac}}</td>
+                    <td>{{avisoCritico.texto_ac}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 
 

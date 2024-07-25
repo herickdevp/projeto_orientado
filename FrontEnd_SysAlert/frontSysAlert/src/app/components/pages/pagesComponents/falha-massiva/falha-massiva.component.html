@@ -4,7 +4,32 @@
         <h2 class="tituloFalhaMassiva">Falhas Massivas</h2>
         <p></p>
     </div>
-    <div class="logicaFalhaMassiva">LOGICA DO COMPONENTE</div>
+    <div class="tableFalhaMassiva">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nº OS</th>
+                    <th>Data de Inicio</th>
+                    <th>Descrição</th>
+                    <th>Previsão</th>
+                    <th>Localidade</th>
+                    <th>Elemento</th>
+                    <th>Afetando</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="tableFalhasMassivas" *ngFor="let falhaMassiva of falhasMassivas" (dblclick)="openConfig()">
+                    <td>{{falhaMassiva.id_fm}} <br> {{falhaMassiva.os_cor_fm}} </td>
+                    <td>{{falhaMassiva.data_abertura_fm}}</td>
+                    <td>{{falhaMassiva.descricao_fm}}</td>
+                    <td>{{falhaMassiva.previsao_fm}}</td>
+                    <td>{{falhaMassiva.localidade_fm}}</td>
+                    <td>{{falhaMassiva.elemento_afetado_1_fm}} <br> {{falhaMassiva.elemento_afetado_2_fm}} <br> {{falhaMassiva.elemento_afetado_3_fm}}</td>
+                    <td>{{falhaMassiva.ssp1_fm}} <br> {{falhaMassiva.ssp2_fm}} <br> {{falhaMassiva.ssp3_fm}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 
 

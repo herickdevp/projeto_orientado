@@ -4,7 +4,28 @@
         <h2 class="tituloFalhaSistemica">Falhas Sistemicas</h2>
         <p></p>
     </div>
-    <div class="logicaFalhaSistemica">LOGICA DO COMPONENTE</div>
+    <div class="tableFalhaSistemica">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nº OS</th>
+                    <th>Data de Inicio</th>
+                    <th>Sistema</th>
+                    <th>Descrição</th>
+                    <th>Orientação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="tableFalhasSistemicas" *ngFor="let falhaSistemica of falhasSistemicas" (dblclick)="openConfig()">
+                    <td>{{falhaSistemica.id_fs}}</td>
+                    <td>{{falhaSistemica.data_abertura_fs}}</td>
+                    <td>{{falhaSistemica.sistema_afetado_fs}}</td>
+                    <td>{{falhaSistemica.descricao_fs}}</td>
+                    <td>{{falhaSistemica.orientacao_fs}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 
 

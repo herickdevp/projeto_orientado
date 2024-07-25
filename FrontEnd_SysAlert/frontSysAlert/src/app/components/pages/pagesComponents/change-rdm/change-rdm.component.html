@@ -4,7 +4,37 @@
         <h2 class="tituloChange">Change - RDM</h2>
         <p></p>
     </div>
-    <div class="logicaChange">LOGICA DO COMPONENTE</div>
+    <div class="tableChange">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nº OS</th>
+                    <th>Data de Inicio</th>
+                    <th>Data de Fechamento</th>
+                    <th>Descrição</th>
+                    <th>Tempo de Instabilidade</th>
+                    <th>Cliente Afetado</th>
+                    <th>Sistema Afetado</th>
+                    <th>Localidade</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="tableChanges" *ngFor="let changeRdm of changeRdms" (dblclick)="openConfig()">
+                    <td>{{changeRdm.id_rdm}}</td>
+                    <td>{{changeRdm.data_abertura_rdm}}</td>
+                    <td>{{changeRdm.data_fechamento_rdm}}</td>
+                    <td>{{changeRdm.descricao_rdm}}</td>
+                    <td>{{changeRdm.tempo_instabilidade_rdm}}</td>
+                    <td>{{changeRdm.cliente_afetado_rdn}}</td>
+                    <td>{{changeRdm.sistema_afetadi_rdm}}</td>
+                    <td>{{changeRdm.localidade_afetada}}</td>
+                    <td>{{changeRdm.status_rdm}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
 </div>
 
 
