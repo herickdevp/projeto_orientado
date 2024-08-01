@@ -12,11 +12,13 @@ import { environment } from '../../../../../environments/environment';
 })
 export class AvisoCriticoComponent {
 iconeAdicionar:string = 'add.svg'; 
+iconeConfig:string = 'config.svg'
 
 //CONEXÃO COM A API
 public httpClient = inject(HttpClient)
 public avisosCriticos: Array<any> = []
 public apiUrl = environment.api;
+public nivelUsuario = environment.nivelUsuario;
 
 ngOnInit(){
   this.httpClient.get(this.apiUrl + "aviso_critico").subscribe({

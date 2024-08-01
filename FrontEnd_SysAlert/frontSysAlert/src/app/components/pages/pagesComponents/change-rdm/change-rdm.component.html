@@ -1,6 +1,7 @@
 <div class="change-rdm">
     <div class="header-change">
-        <img class="btnAdicionar" (click)="openModal()" [src]="iconeAdicionar">
+        <img *ngIf="nivelUsuario === 1 || nivelUsuario === 2" class="btnAdicionar" (click)="openModal()" [src]="iconeAdicionar">
+        <p *ngIf="nivelUsuario === 0"></p>
         <h2 class="tituloChange">Change - RDM</h2>
         <p></p>
     </div>
@@ -8,6 +9,7 @@
         <table>
             <thead>
                 <tr>
+                    <th *ngIf="nivelUsuario === 1 || nivelUsuario === 2"></th>
                     <th>Nº OS</th>
                     <th>Data de Inicio</th>
                     <th>Data de Fechamento</th>
@@ -21,6 +23,7 @@
             </thead>
             <tbody>
                 <tr class="tableChanges" *ngFor="let changeRdm of changeRdms" (dblclick)="openConfig()">
+                    <td *ngIf="nivelUsuario === 1 || nivelUsuario === 2"><img [src]="iconeConfig" (click)="openConfig()" class="btnAdicionar"></td>
                     <td>{{changeRdm.id_rdm}}</td>
                     <td>{{changeRdm.data_abertura_rdm}}</td>
                     <td>{{changeRdm.data_fechamento_rdm}}</td>

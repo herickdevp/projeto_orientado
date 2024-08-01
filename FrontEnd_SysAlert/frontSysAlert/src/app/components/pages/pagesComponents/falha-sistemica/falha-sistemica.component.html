@@ -1,6 +1,7 @@
 <div class="falha-sistemica">
     <div class="header-falhaSistemica">
-        <img class="btnAdicionar" (click)="openModal()" [src]="iconeAdicionar">
+        <img *ngIf="nivelUsuario === 1 || nivelUsuario === 2" class="btnAdicionar" (click)="openModal()" [src]="iconeAdicionar">
+        <p *ngIf="nivelUsuario === 0"></p>
         <h2 class="tituloFalhaSistemica">Falhas Sistemicas</h2>
         <p></p>
     </div>
@@ -8,6 +9,7 @@
         <table>
             <thead>
                 <tr>
+                    <th *ngIf="nivelUsuario === 1 || nivelUsuario === 2"></th>
                     <th>Nº OS</th>
                     <th>Data de Inicio</th>
                     <th>Sistema</th>
@@ -17,6 +19,7 @@
             </thead>
             <tbody>
                 <tr class="tableFalhasSistemicas" *ngFor="let falhaSistemica of falhasSistemicas" (dblclick)="openConfig()">
+                    <td *ngIf="nivelUsuario === 1 || nivelUsuario === 2"><img [src]="iconeConfig" (click)="openConfig()" class="btnAdicionar"></td>
                     <td>{{falhaSistemica.id_fs}}</td>
                     <td>{{falhaSistemica.data_abertura_fs}}</td>
                     <td>{{falhaSistemica.sistema_afetado_fs}}</td>

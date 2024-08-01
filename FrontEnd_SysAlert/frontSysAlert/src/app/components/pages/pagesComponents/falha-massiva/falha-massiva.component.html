@@ -1,6 +1,7 @@
 <div class="falha-massiva">
     <div class="header-falhaMassiva">
-        <img class="btnAdicionar" (click)="openModal()" [src]="iconeAdicionar">
+        <img *ngIf="nivelUsuario === 1 || nivelUsuario === 2" class="btnAdicionar" (click)="openModal()" [src]="iconeAdicionar">
+        <p *ngIf="nivelUsuario === 0"></p>
         <h2 class="tituloFalhaMassiva">Falhas Massivas</h2>
         <p></p>
     </div>
@@ -8,6 +9,7 @@
         <table>
             <thead>
                 <tr>
+                    <th *ngIf="nivelUsuario === 1 || nivelUsuario === 2"></th>
                     <th>Nº OS</th>
                     <th>Data de Inicio</th>
                     <th>Descrição</th>
@@ -19,6 +21,7 @@
             </thead>
             <tbody>
                 <tr class="tableFalhasMassivas" *ngFor="let falhaMassiva of falhasMassivas" (dblclick)="openConfig()">
+                    <td *ngIf="nivelUsuario === 1 || nivelUsuario === 2"><img [src]="iconeConfig" (click)="openConfig()" class="btnAdicionar"></td>
                     <td>{{falhaMassiva.id_fm}} <br> {{falhaMassiva.os_cor_fm}} </td>
                     <td>{{falhaMassiva.data_abertura_fm}}</td>
                     <td>{{falhaMassiva.descricao_fm}}</td>

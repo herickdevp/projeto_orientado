@@ -1,6 +1,7 @@
 <div class="aviso-critico">
     <div class="header-aviso">
-        <img class="btnAdicionar" (click)="openModal()" [src]="iconeAdicionar">
+        <img *ngIf="nivelUsuario === 1 || nivelUsuario === 2" class="btnAdicionar" (click)="openModal()" [src]="iconeAdicionar">
+        <p *ngIf="nivelUsuario === 0"></p>
         <h2 class="tituloAvisos">Avisos Críticos</h2>
         <p></p>
     </div>
@@ -8,12 +9,14 @@
         <table>
             <thead>
                 <tr>
+                    <th *ngIf="nivelUsuario === 1 || nivelUsuario === 2"></th>
                     <th>Data Inicio</th>
                     <th>Aviso</th>
                 </tr>
             </thead>
             <tbody>
                 <tr class="tableAvisos" *ngFor="let avisoCritico of avisosCriticos" (dblclick)="openConfig()">
+                    <td *ngIf="nivelUsuario === 1 || nivelUsuario === 2"><img [src]="iconeConfig" (click)="openConfig()" class="btnAdicionar"></td>
                     <td>{{avisoCritico.id_ac}}</td>
                     <td>{{avisoCritico.texto_ac}}</td>
                 </tr>

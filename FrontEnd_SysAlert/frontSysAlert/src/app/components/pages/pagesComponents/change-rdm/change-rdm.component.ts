@@ -20,6 +20,7 @@ export class ChangeRdmComponent {
 public httpClient = inject(HttpClient)
 public changeRdms: Array<changeRdm> = []
 public apiUrl = environment.api;
+public nivelUsuario = environment.nivelUsuario;
 
 ngOnInit(){
   this.httpClient.get(this.apiUrl + "change_rdm").subscribe({

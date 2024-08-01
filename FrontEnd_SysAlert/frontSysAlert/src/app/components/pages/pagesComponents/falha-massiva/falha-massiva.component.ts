@@ -12,12 +12,14 @@ import { HttpClient } from '@angular/common/http';
 })
 export class FalhaMassivaComponent {
   iconeAdicionar:string = 'add.svg'; 
+  iconeConfig:string = 'config.svg'
 
   //CONEXÃO COM A API
   public httpClient = inject(HttpClient)
   public falhasMassivas: Array<any> = []
   public apiUrl = environment.api;
-
+  public nivelUsuario = environment.nivelUsuario;
+  
   ngOnInit(){
     this.httpClient.get(this.apiUrl + "falha_massiva").subscribe({
       next: (data: any) => {
