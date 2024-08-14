@@ -1,3 +1,136 @@
 .conteiner-relatorio {
     min-height: 100vh;
 }
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contêiner da página */
+.page-container {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Estilos do contêiner de filtro */
+.filter-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.filter-container h2 {
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    flex: 1;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-confirm,
+.btn-clear {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-confirm {
+    background-color: #239687;
+    color: #ffffff;
+}
+
+.btn-confirm:hover {
+    background-color: #29ab9a;
+}
+
+.btn-clear {
+    background-color: #f44336;
+    color: #ffffff;
+}
+
+.btn-clear:hover {
+    background-color: #d32f2f;
+}
+
+/* Estilos do contêiner de resultados */
+.results-container {
+    flex: 2;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.results-header h2 {
+    color: #333333;
+}
+
+.btn-download {
+    padding: 12px 20px;
+    background-color: #239687;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: #29ab9a;
+}
+
+/* Estilos do conteúdo dos resultados */
+.results-content {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    min-height: 300px;
+    /* Espaço para os resultados da pesquisa */
+}

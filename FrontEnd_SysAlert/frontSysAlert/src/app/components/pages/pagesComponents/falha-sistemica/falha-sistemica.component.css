@@ -49,7 +49,7 @@
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    max-width: 500px;
+    max-width: 1000px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -117,4 +117,80 @@ thead tr {
 thead th,
 thead td {
     padding: 12px 15px;
+}
+
+
+/* forms modal add fs */
+
+/* Estilo das linhas do formulário */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+/* Estilo dos grupos de formulário */
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="datetime-local"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 80px;
+}
+
+/* Estilo dos botões */
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn-save,
+.btn-cancel {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-save {
+    background-color: #239687;
+    color: #ffffff;
+}
+
+.btn-save:hover {
+    background-color: #29ab9a;
+}
+
+.btn-cancel {
+    background-color: #dc3545;
+    color: #ffffff;
+}
+
+.btn-cancel:hover {
+    background-color: #c82333;
 }

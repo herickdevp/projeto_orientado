@@ -42,7 +42,174 @@
 <div class="modal" *ngIf="isVisible">
     <div class="modal-content">
         <span class="close" (click)="closeModal()">&times;</span>
-        <p>MODAL ADIONAR</p>
+        <form>
+            <!-- Primeira linha: ID FM, OS Cor e Tipo FM -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="id_fm">ID FM</label>
+                    <input type="text" id="id_fm" name="id_fm" maxlength="20" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="os_cor_fm">OS Cor</label>
+                    <input type="text" id="os_cor_fm" name="os_cor_fm" maxlength="20">
+                </div>
+
+                <div class="form-group">
+                    <label for="tipo_fm">Tipo FM</label>
+                    <input type="text" id="tipo_fm" name="tipo_fm" maxlength="20" required>
+                </div>
+            </div>
+
+            <!-- Segunda linha: Aberta Por, Localidade e Regional -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="aberta_por_fm">Aberta Por</label>
+                    <input type="text" id="aberta_por_fm" name="aberta_por_fm" maxlength="20" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="localidade_fm">Localidade</label>
+                    <input type="text" id="localidade_fm" name="localidade_fm" maxlength="50" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="regional_fm">Regional</label>
+                    <input type="text" id="regional_fm" name="regional_fm" maxlength="50">
+                </div>
+            </div>
+
+            <!-- Terceira linha: Quantidade Afetados e Entrantes -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="qtd_afetado_fm">Qtd. Afetados</label>
+                    <input type="number" id="qtd_afetado_fm" name="qtd_afetado_fm" maxlength="5">
+                </div>
+
+                <div class="form-group">
+                    <label for="qtd_entrante_fm">Qtd. Entrantes</label>
+                    <input type="number" id="qtd_entrante_fm" name="qtd_entrante_fm" maxlength="5">
+                </div>
+
+                <div class="form-group">
+                    <label for="status_fm">Status FM</label>
+                    <select id="status_fm" name="status_fm" required>
+                        <option value="" disabled selected>Selecione o status</option>
+                        <option value="true">Ativo</option>
+                        <option value="false">Inativo</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Quarta linha: Data Abertura e Data Fechamento -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="data_abertura_fm">Data de Abertura</label>
+                    <input type="datetime-local" id="data_abertura_fm" name="data_abertura_fm" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="data_fechamento_fm">Data de Fechamento</label>
+                    <input type="datetime-local" id="data_fechamento_fm" name="data_fechamento_fm">
+                </div>
+            </div>
+
+            <!-- Quinta linha: Banner FM e Datas do Banner -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="banner_fm">Banner FM</label>
+                    <select id="banner_fm" name="banner_fm">
+                        <option value="" disabled selected>Selecione o status</option>
+                        <option value="true">Sim</option>
+                        <option value="false">Não</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="data_inicio_banner_fm">Data Início Banner</label>
+                    <input type="datetime-local" id="data_inicio_banner_fm" name="data_inicio_banner_fm">
+                </div>
+
+                <div class="form-group">
+                    <label for="data_fim_banner_fm">Data Fim Banner</label>
+                    <input type="datetime-local" id="data_fim_banner_fm" name="data_fim_banner_fm">
+                </div>
+            </div>
+
+            <!-- Sexta linha: Elementos Afetados 1, 2 e 3 -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="elemento_afetado_1_fm">Elemento Afetado 1</label>
+                    <input type="text" id="elemento_afetado_1_fm" name="elemento_afetado_1_fm" maxlength="50">
+                </div>
+
+                <div class="form-group">
+                    <label for="elemento_afetado_2_fm">Elemento Afetado 2</label>
+                    <input type="text" id="elemento_afetado_2_fm" name="elemento_afetado_2_fm" maxlength="50">
+                </div>
+
+                <div class="form-group">
+                    <label for="elemento_afetado_3_fm">Elemento Afetado 3</label>
+                    <input type="text" id="elemento_afetado_3_fm" name="elemento_afetado_3_fm" maxlength="50">
+                </div>
+            </div>
+
+            <!-- Sétima linha: Elementos Afetados 4 e 5 -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="elemento_afetado_4_fm">Elemento Afetado 4</label>
+                    <input type="text" id="elemento_afetado_4_fm" name="elemento_afetado_4_fm" maxlength="50">
+                </div>
+
+                <div class="form-group">
+                    <label for="elemento_afetado_5_fm">Elemento Afetado 5</label>
+                    <input type="text" id="elemento_afetado_5_fm" name="elemento_afetado_5_fm" maxlength="50">
+                </div>
+            </div>
+
+            <!-- Oitava linha: Descrição FM e Solução FM -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="descricao_fm">Descrição FM</label>
+                    <textarea id="descricao_fm" name="descricao_fm" maxlength="255" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="solucao_fm">Solução FM</label>
+                    <textarea id="solucao_fm" name="solucao_fm" maxlength="255"></textarea>
+                </div>
+            </div>
+
+            <!-- Nona linha: Previsão, SSP 1, 2 e 3 -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="previsao_fm">Previsão</label>
+                    <input type="datetime-local" id="previsao_fm" name="previsao_fm">
+                </div>
+
+                <div class="form-group">
+                    <label for="ssp1_fm">SSP 1</label>
+                    <input type="text" id="ssp1_fm" name="ssp1_fm" maxlength="50">
+                </div>
+
+                <div class="form-group">
+                    <label for="ssp2_fm">SSP 2</label>
+                    <input type="text" id="ssp2_fm" name="ssp2_fm" maxlength="50">
+                </div>
+
+                <div class="form-group">
+                    <label for="ssp3_fm">SSP 3</label>
+                    <input type="text" id="ssp3_fm" name="ssp3_fm" maxlength="50">
+                </div>
+            </div>
+
+            <!-- Botões de Ação -->
+            <div class="form-actions">
+                <button type="submit" class="btn-save">Salvar</button>
+                <button type="button" class="btn-cancel" (click)="closeModal()">Cancelar</button>
+            </div>
+        </form>
+
 
     </div>
 </div>

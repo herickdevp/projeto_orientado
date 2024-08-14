@@ -1,3 +1,73 @@
 <div class="conteiner-relatorio">
-    <p>relatorio works!</p>
+    <div class="page-container">
+        <!-- Contêiner de Filtro -->
+        <div class="filter-container">
+            <h2>Filtros</h2>
+            <form>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="start-date">Data Início</label>
+                        <input type="date" id="start-date" name="start-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="end-date">Data Final</label>
+                        <input type="date" id="end-date" name="end-date" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="type">Tipo</label>
+                        <select id="type" name="type" required>
+                            <option value="" disabled selected>Selecione um tipo</option>
+                            <option value="avisos-criticos">Avisos Críticos</option>
+                            <option value="falhas-massivas">Falhas Massivas</option>
+                            <option value="falhas-sistemicas">Falhas Sistêmicas</option>
+                            <option value="change-rdm">Change RDM</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="os-number">Número da OS</label>
+                        <input type="text" id="os-number" name="os-number" placeholder="Digite o número da OS">
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Localidade</label>
+                        <input type="text" id="location" name="location" placeholder="Digite a localidade">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="element">Elemento</label>
+                        <input type="text" id="element" name="element" placeholder="Digite o elemento">
+                    </div>
+                    <div class="form-group">
+                        <label for="system">Sistema</label>
+                        <input type="text" id="system" name="system" placeholder="Digite o sistema">
+                    </div>
+                    <div class="form-group">
+                        <label for="status">Status da OS</label>
+                        <input type="text" id="status" name="status" placeholder="Digite o status">
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-confirm">Confirmar</button>
+                    <button type="reset" class="btn-clear">Limpar Filtros</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Contêiner de Resultado -->
+        <div class="results-container">
+            <div class="results-header">
+                <h2>RELATÓRIO</h2>
+                <button class="btn-download">Fazer Download</button>
+            </div>
+            <div class="results-content">
+                <!-- Resultados da pesquisa serão exibidos aqui -->
+            </div>
+        </div>
+    </div>
+
 </div>

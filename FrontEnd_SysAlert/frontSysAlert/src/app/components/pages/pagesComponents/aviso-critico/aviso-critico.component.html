@@ -32,7 +32,49 @@
 <div class="modal" *ngIf="isVisible">
     <div class="modal-content">
         <span class="close" (click)="closeModal()">&times;</span>
-        <p>MODAL ADIONAR</p>
+
+        <form>
+            <!-- Campo ID AC -->
+            <div class="form-group">
+                <label for="id_ac">ID AC</label>
+                <input type="text" id="id_ac" name="id_ac" maxlength="20" required>
+            </div>
+
+            <!-- Campo Texto AC -->
+            <div class="form-group">
+                <label for="texto_ac">Texto AC</label>
+                <textarea id="texto_ac" name="texto_ac" maxlength="255" required></textarea>
+            </div>
+
+            <!-- Campo Status AC -->
+            <div class="form-group">
+                <label for="status_ac">Status AC</label>
+                <select id="status_ac" name="status_ac" required>
+                    <option value="" disabled selected>Selecione o status</option>
+                    <option value="true">Ativo</option>
+                    <option value="false">Inativo</option>
+                </select>
+            </div>
+
+            <!-- Campo Data Início AC -->
+            <div class="form-group">
+                <label for="data_inicio_ac">Data Início AC</label>
+                <input type="datetime-local" id="data_inicio_ac" name="data_inicio_ac" required>
+            </div>
+
+            <!-- Campo Data Fim AC -->
+            <div class="form-group">
+                <label for="data_fim_ac">Data Fim AC</label>
+                <input type="datetime-local" id="data_fim_ac" name="data_fim_ac">
+            </div>
+
+            <!-- Botões de Ação -->
+            <div class="form-actions">
+                <button type="submit" class="btn-save">Salvar</button>
+                <button type="button" class="btn-cancel" (click)="closeModal()">Cancelar</button>
+            </div>
+        </form>
+
 
     </div>
 </div>

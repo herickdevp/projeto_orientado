@@ -38,7 +38,75 @@
 <div class="modal" *ngIf="isVisible">
     <div class="modal-content">
         <span class="close" (click)="closeModal()">&times;</span>
-        <p>MODAL ADIONAR</p>
+        <form>
+            <!-- Primeira linha: ID FS e Sistema Afetado -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="id_fs">Nº OS</label>
+                    <input type="text" id="id_fs" name="id_fs" maxlength="20" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="sistema_afetado_fs">Sistema Afetado</label>
+                    <input type="text" id="sistema_afetado_fs" name="sistema_afetado_fs" maxlength="50" required>
+                </div>
+            </div>
+
+            <!-- Segunda linha: Data Abertura e Data Fechamento -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="data_abertura_fs">Data de Abertura</label>
+                    <input type="datetime-local" id="data_abertura_fs" name="data_abertura_fs" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="data_fechamento_fs">Data de Fechamento</label>
+                    <input type="datetime-local" id="data_fechamento_fs" name="data_fechamento_fs">
+                </div>
+            </div>
+
+            <!-- Terceira linha: Status FS e Equipe Tratativa -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="status_fs">Status FS</label>
+                    <select id="status_fs" name="status_fs" required>
+                        <option value="" disabled selected>Selecione o status</option>
+                        <option value="true">Ativo</option>
+                        <option value="false">Inativo</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="equipe_tratativa_fs">Equipe de Tratativa</label>
+                    <input type="text" id="equipe_tratativa_fs" name="equipe_tratativa_fs" maxlength="20" required>
+                </div>
+            </div>
+
+            <!-- Quarta linha: Responsável FS -->
+            <div class="form-group">
+                <label for="responsavel_fs">Responsável FS</label>
+                <input type="text" id="responsavel_fs" name="responsavel_fs" maxlength="20" required>
+            </div>
+
+            <!-- Quinta linha: Descrição FS -->
+            <div class="form-group">
+                <label for="descricao_fs">Descrição FS</label>
+                <textarea id="descricao_fs" name="descricao_fs" maxlength="255" required></textarea>
+            </div>
+
+            <!-- Sexta linha: Orientação FS -->
+            <div class="form-group">
+                <label for="orientacao_fs">Orientação FS</label>
+                <textarea id="orientacao_fs" name="orientacao_fs" maxlength="255"></textarea>
+            </div>
+
+            <!-- Botões de Ação -->
+            <div class="form-actions">
+                <button type="submit" class="btn-save">Salvar</button>
+                <button type="button" class="btn-cancel" (click)="closeModal()">Cancelar</button>
+            </div>
+        </form>
+
 
     </div>
 </div>

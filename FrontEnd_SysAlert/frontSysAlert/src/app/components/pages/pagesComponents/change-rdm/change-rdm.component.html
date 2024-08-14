@@ -47,7 +47,75 @@
 <div class="modal" *ngIf="isVisible">
     <div class="modal-content">
         <span class="close" (click)="closeModal()">&times;</span>
-        <p>MODAL ADIONAR</p>
+        <form>
+            <!-- Primeira linha: ID RDM e Datas -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="id_rdm">ID RDM</label>
+                    <input type="text" id="id_rdm" name="id_rdm" maxlength="20" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="data_abertura_rdm">Data de Abertura</label>
+                    <input type="datetime-local" id="data_abertura_rdm" name="data_abertura_rdm" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="data_fechamento_rdm">Data de Fechamento</label>
+                    <input type="datetime-local" id="data_fechamento_rdm" name="data_fechamento_rdm">
+                </div>
+            </div>
+
+            <!-- Segunda linha: Descrição e Tempo de Instabilidade -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="descricao_rdm">Descrição RDM</label>
+                    <textarea id="descricao_rdm" name="descricao_rdm" maxlength="255" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="tempo_instabilidade_rdm">Tempo de Instabilidade</label>
+                    <input type="text" id="tempo_instabilidade_rdm" name="tempo_instabilidade_rdm" maxlength="20" required>
+                </div>
+            </div>
+
+            <!-- Terceira linha: Cliente Afetado e Sistema Afetado -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="cliente_afetado_rdm">Cliente Afetado</label>
+                    <input type="text" id="cliente_afetado_rdm" name="cliente_afetado_rdm" maxlength="255" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="sistema_afetado_rdm">Sistema Afetado</label>
+                    <input type="text" id="sistema_afetado_rdm" name="sistema_afetado_rdm" maxlength="255" required>
+                </div>
+            </div>
+
+            <!-- Quarta linha: Localidade Afetada e Status -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="localidade_afetada">Localidade Afetada</label>
+                    <input type="text" id="localidade_afetada" name="localidade_afetada" maxlength="255" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="status_rdm">Status RDM</label>
+                    <select id="status_rdm" name="status_rdm" required>
+                        <option value="" disabled selected>Selecione o status</option>
+                        <option value="true">Ativo</option>
+                        <option value="false">Inativo</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Botões de Ação -->
+            <div class="form-actions">
+                <button type="submit" class="btn-save">Salvar</button>
+                <button type="button" class="btn-cancel" (click)="closeModal()">Cancelar</button>
+            </div>
+        </form>
+
 
     </div>
 </div>
